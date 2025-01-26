@@ -8,7 +8,7 @@ export default function About() {
         <div className="space-y-4">
           <p>
             Welcome to Nusa Barong Motor, your trusted second-hand car
-            dealership since 2009. For over a decade, we've been connecting
+            dealership since 2009. For over a decade, we have been connecting
             drivers with their perfect pre-owned vehicles.
           </p>
           <p>
@@ -32,7 +32,7 @@ export default function About() {
           <p>
             Thank you for considering Nusa Barong Motor for your next vehicle
             purchase. We look forward to helping you find the perfect car for
-            your needs and budget, just as we've been doing since 2009.
+            your needs and budget, just as we have been doing since 2009.
           </p>
         </div>
       </div>
