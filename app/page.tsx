@@ -10,7 +10,7 @@ export default function Home() {
 
         {/* NAVBAR */}
         <nav className="absolute w-full z-10">
-          <div className="relative flex text-white italic font-bold text-[25px] items-center justify-around mx-[400px] my-4">
+          <div className="relative flex text-white italic font-bold text-[25px] items-center justify-center gap-x-24 mx-[400px] my-6">
             <Link href={"/"}>HOME</Link>
             <Link href={"/galleries"}>GALLERIES</Link>
             <Link href={"/about"}>ABOUT</Link>
