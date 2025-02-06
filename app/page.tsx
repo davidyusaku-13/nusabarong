@@ -1,16 +1,37 @@
-import Hero from "@/components/hero";
-import ConnectSupabaseSteps from "@/components/tutorial/connect-supabase-steps";
-import SignUpUserSteps from "@/components/tutorial/sign-up-user-steps";
-import { hasEnvVars } from "@/utils/supabase/check-env-vars";
+import Image from "next/image";
+import Link from "next/link";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
-      {/* <Hero /> */}
-      <main className="flex-1 flex flex-col gap-6 px-4">
-        {/* <h2 className="font-medium text-xl mb-4">Next steps</h2> */}
-        {/* {hasEnvVars ? <SignUpUserSteps /> : <ConnectSupabaseSteps />} */}
-      </main>
+      <div className="relative w-full h-screen bg-[url(/bg_home.webp)] bg-cover">
+        {/* DIMER - Dim only the background */}
+        <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+        {/* NAVBAR */}
+        <nav className="absolute w-full z-10">
+          <div className="relative flex text-white italic font-bold text-[25px] items-center justify-around mx-[400px] my-4">
+            <Link href={"/"}>HOME</Link>
+            <Link href={"/galleries"}>GALLERIES</Link>
+            <Link href={"/about"}>ABOUT</Link>
+            <Link href={"/contact"}>CONTACT</Link>
+          </div>
+        </nav>
+
+        {/* HERO - Positioned Middle-Left */}
+        <section className="absolute left-[90px] top-1/2 transform -translate-y-1/2 z-10">
+          <div className="text-white italic font-bold text-[80px]">
+            WELCOME TO
+          </div>
+          {/* LOGO NUSABARONG */}
+          <Image
+            src={"/nbm_white.png"}
+            width={406}
+            height={325}
+            alt="nbm_white_logo"
+          />
+        </section>
+      </div>
     </>
   );
 }
