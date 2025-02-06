@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
-  const pathname = usePathname();
   return (
     <>
       <nav className="absolute w-full flex items-center justify-center gap-x-24 my-6 text-white italic font-bold text-[25px]">
