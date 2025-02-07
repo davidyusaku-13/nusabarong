@@ -3,7 +3,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const Hero = () => {
+export default function Hero() {
   const pathname = usePathname();
   const path = pathname.split("/");
   const heroTxt = path[path.length - 1];
@@ -26,6 +26,4 @@ const Hero = () => {
       </section>
     </>
   );
-};
-
-export default Hero;
+}
