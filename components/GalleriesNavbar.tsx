@@ -27,7 +27,7 @@ export default function GalleriesNavbar() {
             </p>
           </div>
         </div>
-        <div className="flex md:w-2/6 justify-between items-center gap-x-2">
+        <div className="flex md:w-2/6 w-full justify-between items-center gap-x-2">
           <FilterAndSearch />
         </div>
       </div>
