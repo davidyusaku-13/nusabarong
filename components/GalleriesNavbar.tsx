@@ -6,26 +6,28 @@ import FilterAndSearch from "./FilterAndSearch";
 export default function GalleriesNavbar() {
   return (
     <>
-      <div className="flex justify-center items-center p-[30px] h-[131px]">
-        {/* LOGO */}
-        <div>
-          <Link href={"/"}>
-            <Image
-              src="/nbm_white.png"
-              width={96}
-              height={79}
-              alt="nbm_white.png"
-              className="w-[60px] lg:w-[96px]"
-            />
-          </Link>
+      <div className="flex flex-col md:flex-row md:justify-between justify-center items-center p-[30px] h-[131px]">
+        <div className="flex w-full md:w-4/6 justify-between items-center">
+          {/* LOGO */}
+          <div>
+            <Link href={"/"}>
+              <Image
+                src="/nbm_white.png"
+                width={96}
+                height={79}
+                alt="nbm_white.png"
+                className="w-[40px] lg:w-[96px]"
+              />
+            </Link>
+          </div>
+          {/* TITLE */}
+          <div className="mx-auto">
+            <p className="font-extrabold 2xl:text-8xl xl:text-7xl lg:text-5xl md:text-4xl sm:text-[32px] text-[32px]">
+              CAR GALLERIES
+            </p>
+          </div>
         </div>
-        {/* TITLE */}
-        <div className="mx-auto">
-          <p className="font-extrabold 2xl:text-8xl xl:text-7xl lg:text-5xl md:text-3xl sm:text-[32px] text-[16px]">
-            CAR GALLERIES
-          </p>
-        </div>
-        <div className="flex justify-center items-center gap-x-2">
+        <div className="flex md:w-2/6 justify-between items-center gap-x-2">
           <FilterAndSearch />
         </div>
       </div>

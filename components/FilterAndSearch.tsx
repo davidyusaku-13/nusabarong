@@ -6,10 +6,10 @@ export default function FilterAndSearch() {
   return (
     <>
       {/* FILTER */}
-      <div>
+      <div className="w-1/2">
         <select
           id="filter"
-          className="bg-transparent text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] md:w-[120px] p-1"
+          className="bg-transparent text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] w-full p-1"
           defaultValue={"Filter"}
         >
           <option disabled>Filter</option>
@@ -18,7 +18,7 @@ export default function FilterAndSearch() {
       </div>
 
       {/* SEARCH */}
-      <div className="relative">
+      <div className="relative w-1/2">
         <div className="absolute inset-y-0 end-2 flex items-center ps-3 pointer-events-none">
           <FontAwesomeIcon className="w-4 h-4" icon={faMagnifyingGlass} />
         </div>
@@ -26,7 +26,7 @@ export default function FilterAndSearch() {
           type="text"
           name="search"
           id="search"
-          className="bg-transparent text-white placeholder:text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] md:w-[120px] w-[80px] p-1"
+          className="bg-transparent text-white placeholder:text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] w-full p-1"
           placeholder="Search"
         />
       </div>
