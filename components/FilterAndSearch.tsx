@@ -26,7 +26,7 @@ export default function FilterAndSearch() {
           type="text"
           name="search"
           id="search"
-          className="bg-transparent text-white placeholder:text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] md:w-[120px] p-1"
+          className="bg-transparent text-white placeholder:text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] md:w-[120px] w-[120px] p-1"
           placeholder="Search"
         />
       </div>

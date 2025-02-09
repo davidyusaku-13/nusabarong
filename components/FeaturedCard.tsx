@@ -4,23 +4,19 @@ import React from "react";
 export default function FeaturedCard() {
   return (
     <>
-      <div className="flex min-w-[300px]">
-        <div className="relative w-[300px]">
-          <Image
-            src={"/img/datsun.jpeg"}
-            alt="datsun"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <p className="bg-white text-black w-[300px] p-6 text-justify text-sm ">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor maxime
-          aspernatur eveniet rem, atque quam temporibus, ipsam non qui beatae
-          magni esse, perspiciatis repellendus. Fugit praesentium sint
-          temporibus amet dolores.Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Dolor maxime aspernatur eveniet rem, atque quam
-          temporibus, ipsam non qui beatae magni esse, perspiciatis repellendus.
-          Fugit praesentium sint temporibus amet dolores.
+      <div className="flex flex-col justify-center items-center sm:flex-row sm:w-[500px] sm:h-[300px]">
+        <Image
+          src={"/img/datsun.jpeg"}
+          alt="datsun"
+          width={300}
+          height={300}
+          className="object-cover sm:w-[300px]"
+        />
+        <p className="bg-white text-black sm:w-[200px] sm:h-[300px] w-[300px] sm:p-6 p-2 text-justify text-[13px]">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa ea
+          corporis doloribus in necessitatibus inventore, explicabo nisi, alias
+          fuga placeat optio nostrum voluptatum cumque repellat suscipit ullam
+          exercitationem officia labore.
         </p>
       </div>
     </>

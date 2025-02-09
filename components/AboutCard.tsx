@@ -7,7 +7,7 @@ interface AboutCardProps {
 export default function AboutCard({ title }: AboutCardProps) {
   return (
     <>
-      <div className="w-[500px] min-h-[550px] bg-white text-black px-12 pt-4 pb-4 flex flex-col my-6">
+      <div className="sm:w-[500px] w-[300px] min-h-[550px] bg-white text-black sm:px-12 sm:pt-4 sm:pb-4 px-4 pb-4 flex flex-col sm:my-6 my-4">
         <p className="text-center font-bold text-[50px] italic">{title}</p>
         <p className="text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur

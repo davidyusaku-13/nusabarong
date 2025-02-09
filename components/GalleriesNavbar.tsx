@@ -15,6 +15,7 @@ export default function GalleriesNavbar() {
               width={96}
               height={79}
               alt="nbm_white.png"
+              className="hidden"
             />
           </Link>
         </div>

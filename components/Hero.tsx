@@ -11,8 +11,8 @@ export default function Hero() {
     : pathname.split("/").pop()?.toUpperCase();
   return (
     <>
-      <section className="bg-[url(/bg_home.png)] bg-center bg-cover w-full h-screen flex flex-col justify-center items-start pl-[90px]">
-        <p className="text-white italic font-bold 2xl:text-[80px] xl:text-[60px] md:text-[40px]">
+      <section className="bg-[url(/bg_home.png)] bg-center bg-cover w-full h-screen flex flex-col justify-center items-start sm:pl-[90px] pl-8">
+        <p className="text-white italic font-bold 2xl:text-[80px] xl:text-[60px] sm:text-[40px] text-[30px]">
           {heroTxt}
         </p>
         {isHome && (
@@ -21,7 +21,7 @@ export default function Hero() {
             width={406}
             height={325}
             alt="nbm_white.png"
-            className="2xl:w-[406px] xl:w-[300px] md:w-[200px]"
+            className="2xl:w-[406px] xl:w-[300px] sm:w-[200px] w-[150px]"
           />
         )}
       </section>
