@@ -10,10 +10,9 @@ export default function FilterAndSearch() {
         <select
           id="filter"
           className="bg-transparent text-white text-[20px] border border-white text-sm rounded-lg 2xl:w-[230px] md:w-[120px] p-1"
+          defaultValue={"Filter"}
         >
-          <option disabled selected>
-            Filter
-          </option>
+          <option disabled>Filter</option>
           <option value="SUV">SUV</option>
         </select>
       </div>
