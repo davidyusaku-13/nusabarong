@@ -1,6 +1,5 @@
 import React from "react";
 import FeaturedCard from "./FeaturedCard";
-import Image from "next/image";
 
 export default function Featured() {
   return (
