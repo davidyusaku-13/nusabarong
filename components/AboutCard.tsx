@@ -11,16 +11,18 @@ export default function AboutCard({ title }: AboutCardProps) {
         <p className="text-center font-bold text-2xl my-6 sm:text-5xl italic">
           {title}
         </p>
-        <p className="mx-8 mb-8 text-justify">
-          Lorem ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+        <p className="mx-8 mb-8 text-justify overflow-hidden text-ellipsis text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+          convallis dolor in augue sagittis, eget laoreet odio viverra. Donec
+          luctus purus dignissim turpis placerat feugiat. Proin ac luctus felis.
+          Morbi facilisis tellus nec turpis placerat, et egestas massa
+          facilisis. Quisque cursus urna vitae dapibus iaculis. Duis sit amet
+          posuere libero. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Mauris convallis dolor in augue sagittis, eget laoreet odio
+          viverra. Donec luctus purus dignissim turpis placerat feugiat. Proin
+          ac luctus felis. Morbi facilisis tellus nec turpis placerat, et
+          egestas massa facilisis. Quisque cursus urna vitae dapibus iaculis.
+          Duis sit amet posuere libero.
         </p>
       </div>
     </>
