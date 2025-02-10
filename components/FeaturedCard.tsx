@@ -12,11 +12,12 @@ export default function FeaturedCard() {
           alt="img/datsun.jpeg"
           className="md:h-full object-cover"
         />
-        <p className="bg-white p-4 text-black text-sm text-justify md:w-[200px] md:h-full">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+        <p className="bg-white p-4 text-black text-sm text-justify overflow-hidden text-ellipsis md:w-[200px] md:h-full">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+          convallis dolor in augue sagittis, eget laoreet odio viverra. Donec
+          luctus purus dignissim turpis placerat feugiat. Proin ac luctus felis.
+          Morbi facilisis tellus nec turpis placerat, et egestas massa
+          facilisis.
         </p>
       </div>
     </>
