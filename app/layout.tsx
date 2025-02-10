@@ -5,14 +5,14 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const openSans = Open_Sans({
-  variable: "--font-open-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Nusa Barong Motor",
   description:
-    "Discover quality second-hand cars at Nusa Barong Motor – trusted dealership for affordable, reliable, and well-maintained vehicles.",
+    "Discover quality second-hand cars at Nusa Barong Motor - trusted dealership for affordable, reliable, and well-maintained vehicles.",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} antialiased`}>
+      <body className={`${openSans.className} antialiased`}>
         <Navbar />
         {children}
         <Footer />
