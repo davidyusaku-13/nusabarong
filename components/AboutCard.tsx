@@ -11,7 +11,7 @@ export default function AboutCard({ title }: AboutCardProps) {
         <p className="text-center font-bold text-2xl my-6 sm:text-5xl italic">
           {title}
         </p>
-        <p className="mx-8 mb-8 text-justify overflow-hidden text-ellipsis text-lg">
+        <p className="mx-8 mb-8 text-justify overflow-hidden text-ellipsis text-sm font-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
           convallis dolor in augue sagittis, eget laoreet odio viverra. Donec
           luctus purus dignissim turpis placerat feugiat. Proin ac luctus felis.
