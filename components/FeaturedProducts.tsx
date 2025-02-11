@@ -1,7 +1,7 @@
 import React from "react";
-import FeaturedCard from "./FeaturedCard";
+import FeaturedProductsCard from "./FeaturedProductsCard";
 
-export default function Featured() {
+export default function FeaturedProducts() {
   return (
     <>
       <div className="bg-black text-white flex flex-col w-full min-h-[94vh] pb-8">
@@ -11,9 +11,9 @@ export default function Featured() {
           </p>
         </div>
         <div className="flex flex-wrap xl:flex-row xl:justify-center flex-col justify-start items-center gap-8">
-          <FeaturedCard />
-          <FeaturedCard />
-          <FeaturedCard />
+          <FeaturedProductsCard />
+          <FeaturedProductsCard />
+          <FeaturedProductsCard />
         </div>
       </div>
     </>
