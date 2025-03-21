@@ -6,11 +6,11 @@ export default function GalleriesCard() {
     <>
       <div>
         <Image
-          src="/img/datsun.jpeg"
-          width={400}
-          height={400}
-          alt="img/datsun.jpeg"
-          className="h-[250px] w-[420px] object-cover rounded-lg"
+          src="/img/hiace-premio.jpg"
+          width={450}
+          height={250}
+          alt="img/hiace-premio.jpg"
+          className="w-[450px] h-[250px] object-cover rounded-lg"
         />
       </div>
     </>

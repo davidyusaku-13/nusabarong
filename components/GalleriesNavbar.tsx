@@ -22,8 +22,8 @@ export default function GalleriesNavbar() {
           </div>
           {/* TITLE */}
           <div className="mx-auto">
-            <p className="font-extrabold 2xl:text-8xl xl:text-7xl lg:text-5xl md:text-4xl sm:text-[32px] text-[32px]">
-              CAR GALLERIES
+            <p className="font-extrabold uppercase 2xl:text-7xl xl:text-7xl lg:text-5xl md:text-4xl sm:text-[32px] text-[32px]">
+              Eksplorasi Mobil Terbaik
             </p>
           </div>
         </div>
