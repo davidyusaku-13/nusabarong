@@ -1,5 +1,4 @@
 import GalleriesCard from "@/components/GalleriesCard";
-import GalleriesPagination from "@/components/GalleriesPagination";
 import GalleriesNavbar from "@/components/GalleriesNavbar";
 
 export default function Galleries() {
