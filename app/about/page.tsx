@@ -8,15 +8,17 @@ export default function About() {
     <>
       <div className="relative bg-[url(/bg_contact.png)] bg-center bg-cover w-full min-h-[94vh]">
         <AboutNavbar />
-        <section className="mt-6 w-full px-[80px] flex justify-center items-start gap-x-16">
-          <div className="w-1/2 h-full flex flex-col flex-grow gap-y-8">
+        {/* Content Grid */}
+        <div className="mt-4 grid md:grid-cols-2 gap-8 mx-20">
+          {/* Left Column - Vision & Mission */}
+          <div className="flex flex-col gap-6 h-full me-2">
             <AboutVission />
             <AboutMission />
           </div>
-          <div className="w-1/2 h-full">
-            <AboutWhy />
-          </div>
-        </section>
+
+          {/* Right Column - Why Choose Us */}
+          <AboutWhy />
+        </div>
       </div>
     </>
   );

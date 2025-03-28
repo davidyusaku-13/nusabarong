@@ -10,16 +10,18 @@ export default function AboutMission() {
   ];
 
   return (
-    <section className="bg-white/80 text-black rounded-2xl px-[50px] pb-[35px]">
-      <h1 className="font-bold italic text-[50px] pt-2 text-center">Misi</h1>
-      {missions.map((text, index) => (
-        <div key={index} className="mt-2 flex">
-          <div className="bg-black w-6 h-6 rounded-md flex-shrink-0 mt-2 lg:mt-1 me-2 text-white flex justify-center items-center text-sm font-bold">
-            {index + 1}
+    <div className="bg-white/80 text-black rounded-lg px-8 pt-2 pb-8 flex-grow">
+      <h2 className="font-bold text-[50px] text-center italic">Misi</h2>
+      <div className="space-y-4">
+        {missions.map((mission, index) => (
+          <div key={index} className="flex gap-x-2">
+            <div className="flex-shrink-0 bg-black text-white rounded-md w-[30px] h-[30px] mt-1 flex items-center justify-center font-bold text-[20px]">
+              {index + 1}
+            </div>
+            <p className="font-light text-[22px]">{mission}</p>
           </div>
-          <p className="font-light text-lg lg:text-xl text-justify">{text}</p>
-        </div>
-      ))}
-    </section>
+        ))}
+      </div>
+    </div>
   );
 }
