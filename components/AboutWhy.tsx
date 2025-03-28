@@ -29,16 +29,16 @@ export default function AboutWhy() {
   ];
 
   return (
-    <section className="h-full bg-white/80 text-black rounded-2xl px-[50px] pb-[35px]">
-      <h1 className="font-bold italic text-4xl py-4 text-center">
+    <section className="bg-white/80 text-black rounded-2xl px-[50px] pb-[35px]">
+      <h1 className="font-bold italic text-[38px] py-2 text-center ">
         Kenapa Memilih Nusa Barong Motor?
       </h1>
       {missions.map((mission, index) => (
-        <div key={index} className="flex">
-          <div className="bg-black w-[30px] h-[30px] rounded-md flex-shrink-0 mt-2 me-2 text-white flex justify-center items-center text-[20px] font-bold">
+        <div key={index} className="mt-2 flex">
+          <div className="bg-black w-6 h-6 rounded-md flex-shrink-0 mt-2 lg:mt-1 me-2 text-white flex justify-center items-center text-sm font-bold">
             {index + 1}
           </div>
-          <div className="mt-2 text-xl text-justify">
+          <div className="font-light text-lg lg:text-xl text-justify">
             <p className="font-normal">{mission.title}</p>
             <p className="font-light">{mission.text}</p>
           </div>
