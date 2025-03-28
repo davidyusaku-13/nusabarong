@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function AboutWhy() {
-  const missions = [
+  const whys = [
     {
       title: "Kualitas Mobil Terjamin",
       text: "Memberikan Pelayanan Terbaik - Mengutamakan kepuasan pelanggan melalui layanan yang cepat, ramah, dan profesional.",
@@ -29,21 +29,25 @@ export default function AboutWhy() {
   ];
 
   return (
-    <section className="h-full bg-white/80 text-black rounded-2xl px-[50px] pb-[35px]">
-      <h1 className="font-bold italic text-4xl py-4 text-center">
+    <section className="ms-2 bg-white/80 text-black rounded-lg px-8 pt-2 pb-8 h-full flex flex-col">
+      <h2 className="font-bold text-[40px] text-center mb-4 italic">
         Kenapa Memilih Nusa Barong Motor?
-      </h1>
-      {missions.map((mission, index) => (
-        <div key={index} className="flex">
-          <div className="bg-black w-[30px] h-[30px] rounded-md flex-shrink-0 mt-2 me-2 text-white flex justify-center items-center text-[20px] font-bold">
-            {index + 1}
+      </h2>
+      <div className="space-y-4">
+        {whys.map((mission, index) => (
+          <div key={index} className="flex gap-x-2">
+            <div className="flex-shrink-0 bg-black text-white rounded-md w-[30px] h-[30px] mt-1 flex items-center justify-center font-bold text-[20px]">
+              {index + 1}
+            </div>
+            <div className="font-light text-lg lg:text-xl text-justify">
+              <div>
+                <h3 className="font-normal text-[22px]">{mission.title}</h3>
+                <p className="font-light text-[22px]">{mission.text}</p>
+              </div>
+            </div>
           </div>
-          <div className="mt-2 text-xl text-justify">
-            <p className="font-normal">{mission.title}</p>
-            <p className="font-light">{mission.text}</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }

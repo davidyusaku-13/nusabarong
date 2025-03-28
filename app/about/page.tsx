@@ -6,17 +6,20 @@ import AboutWhy from "@/components/AboutWhy";
 export default function About() {
   return (
     <>
-      <div className="absolute -z-10 bg-[url(/bg_contact.png)] bg-center bg-cover w-full h-screen sm:pl-[90px] pl-8"></div>
-      <AboutNavbar />
-      <section className="flex min-h-[74vh] justify-center items-center gap-16 w-full">
-        <div className="flex flex-col max-w-[850px] gap-6">
-          <AboutVission />
-          <AboutMission />
-        </div>
-        <div className="max-w-[850px] min-h-[651px]">
+      <div className="relative bg-[url(/bg_contact.png)] bg-center bg-cover w-full min-h-[94vh]">
+        <AboutNavbar />
+        {/* Content Grid */}
+        <div className="mt-4 grid md:grid-cols-2 gap-8 mx-20">
+          {/* Left Column - Vision & Mission */}
+          <div className="flex flex-col gap-6 h-full me-2">
+            <AboutVission />
+            <AboutMission />
+          </div>
+
+          {/* Right Column - Why Choose Us */}
           <AboutWhy />
         </div>
-      </section>
+      </div>
     </>
   );
 }
