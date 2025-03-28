@@ -9,36 +9,65 @@ import {
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function GalleriesCard() {
+// Define props for dynamic data
+interface GalleriesCardProps {
+  name: string;
+  year: number;
+  color: string;
+  mileage: number;
+  transmission: string;
+  fuelType: string;
+  imageUrl: string;
+}
+
+export default function GalleriesCard({
+  name,
+  year,
+  color,
+  mileage,
+  transmission,
+  fuelType,
+  imageUrl,
+}: GalleriesCardProps) {
+  // Format mileage with thousands separator
+  const formattedMileage = new Intl.NumberFormat("id-ID").format(mileage);
+
+  // Ensure correct image URL handling (local or full URL)
+  const validImageUrl = imageUrl.startsWith("http")
+    ? imageUrl
+    : `/img/${imageUrl}`;
+
   return (
     <div className="relative w-[445px] h-[250px] rounded-lg overflow-hidden group">
       {/* Image */}
       <Image
-        src="/img/hiace-premio.jpg"
+        src={validImageUrl}
         width={445}
         height={250}
-        alt="img/hiace-premio.jpg"
+        alt={name}
         className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50"
       />
 
-      {/* Text Overlay - Hidden initially, slides up & fades in on hover */}
-      <div className="absolute inset-0 w-full text-white flex flex-col justify-center items-center text-center transition-all duration-300  opacity-0 group-hover:opacity-100">
-        <h2 className="text-xl font-bold">Honda CR-V 2.4 AT</h2>
-        <div className="mt-4 w-1/2 grid grid-cols-2 gap-x-16 gap-y-4 place-items-start">
-          <p className="flex justify-center items-center gap-2 mt-1 text-sm text-justify">
-            <FontAwesomeIcon className="w-4 h-4" icon={faCalendarDays} /> 2017
+      {/* Text Overlay - Fade Effect */}
+      <div className="absolute inset-0 w-full bg-black/50 text-white flex flex-col justify-center items-center text-center transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+        <h2 className="font-bold text-[32px]">{name}</h2>
+        <div className="mt-4 grid grid-cols-2 gap-x-24 gap-y-4 place-items-start text-[20px]">
+          <p className="flex justify-center items-center gap-2">
+            <FontAwesomeIcon icon={faCalendarDays} className="w-6 h-6" /> {year}
           </p>
-          <p className="flex justify-center items-center gap-2 mt-1 text-sm text-justify">
-            <FontAwesomeIcon className="w-4 h-4" icon={faPalette} /> Hitam
+          <p className="flex justify-center items-center gap-2">
+            <FontAwesomeIcon icon={faPalette} className="w-6 h-6" /> {color}
           </p>
-          <p className="flex justify-center items-center gap-2 mt-1 text-sm text-justify">
-            <FontAwesomeIcon className="w-4 h-4" icon={faGaugeHigh} /> 84.000
+          <p className="flex justify-center items-center gap-2">
+            <FontAwesomeIcon icon={faGaugeHigh} className="w-6 h-6" />{" "}
+            {formattedMileage}
           </p>
-          <p className="flex justify-center items-center gap-2 mt-1 text-sm text-justify">
-            <FontAwesomeIcon className="w-4 h-4" icon={faGears} /> Otomatis
+          <p className="flex justify-center items-center gap-2">
+            <FontAwesomeIcon icon={faGears} className="w-6 h-6" />{" "}
+            {transmission}
           </p>
-          <p className="flex justify-center items-center gap-2 mt-1 text-sm text-justify">
-            <FontAwesomeIcon className="w-4 h-4" icon={faGasPump} /> Bensin
+          <p className="flex justify-center items-center gap-2">
+            <FontAwesomeIcon icon={faGasPump} className="w-6 h-6" /> {fuelType}
           </p>
         </div>
       </div>
