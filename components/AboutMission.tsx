@@ -10,7 +10,7 @@ export default function AboutMission() {
   ];
 
   return (
-    <div className="bg-white/80 text-black rounded-lg px-8 pt-2 pb-8 flex-grow">
+    <div className="bg-white/80 text-black rounded-[20px] px-8 pt-2 pb-8 flex-grow">
       <h2 className="font-bold text-[50px] text-center italic">Misi</h2>
       <div className="space-y-4">
         {missions.map((mission, index) => (

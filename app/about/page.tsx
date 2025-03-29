@@ -15,7 +15,6 @@ export default function About() {
             <AboutVission />
             <AboutMission />
           </div>
-
           {/* Right Column - Why Choose Us */}
           <AboutWhy />
         </div>
