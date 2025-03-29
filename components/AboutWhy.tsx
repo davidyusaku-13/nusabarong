@@ -29,8 +29,8 @@ export default function AboutWhy() {
   ];
 
   return (
-    <section className="ms-2 bg-white/80 text-black rounded-lg px-8 pt-2 pb-8 h-full flex flex-col">
-      <h2 className="font-bold text-[40px] text-center mb-4 italic">
+    <section className="ms-2 bg-white/80 text-black rounded-[20px] px-8 pt-2 pb-8 h-full flex flex-col">
+      <h2 className="font-bold text-[40px] text-center my-4 italic">
         Kenapa Memilih Nusa Barong Motor?
       </h2>
       <div className="space-y-4">
