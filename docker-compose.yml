@@ -14,21 +14,19 @@ services:
 
   # DEVELOPMENT
   web:
-      build:
-        context: ./nextjs
-      container_name: nextjs
-      ports:
-        - "3000:3000"
-      depends_on:
-        - db
-      networks:
-        - internal
-      env_file:
-        - ./nextjs/.env.local
-      volumes:
-        - ./nextjs:/app         # <-- Mount local code into container
-        - /app/node_modules     # <-- Prevent node_modules overwrite
-      command: npm run dev      # <-- Start in dev mode
+    build:
+      context: ./nextjs
+    container_name: nextjs
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - internal
+    volumes:
+      - ./nextjs:/app # <-- Mount local code into container
+      - /app/node_modules # <-- Prevent node_modules overwrite
+    command: npm run dev # <-- Start in dev mode
 
   # PRODUCTION
   # web:
