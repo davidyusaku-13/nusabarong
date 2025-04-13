@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { supabase } from "@/utils/supabase/client";
 import GalleriesCard from "@/components/GalleriesCard";
 import GalleriesNavbar from "@/components/GalleriesNavbar";
 
@@ -18,21 +17,20 @@ interface GalleryItem {
 
 export default function Galleries() {
   const [galleries, setGalleries] = useState<GalleryItem[]>([]);
-  const [loading, setLoading] = useState(true); // Track loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const { data, error } = await supabase
-        .from("galleries")
-        .select(
-          "id, name, year, color, mileage, transmission, fuel_type, image_url"
-        ); // Only fetch necessary fields
+      try {
+        const res = await fetch("/api/galleries");
+        const data = await res.json();
 
-      if (error) {
-        console.error("Error fetching data:", error);
-      } else {
+        if (!res.ok) throw new Error(data.error || "Fetch failed");
+
         setGalleries(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
       setLoading(false);
     };

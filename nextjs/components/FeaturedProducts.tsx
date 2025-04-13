@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { supabase } from "@/utils/supabase/client"; // Ensure this file is set up
 import FeaturedProductsCard from "./FeaturedProductsCard";
 
 // Define TypeScript interface for the data structure
@@ -17,13 +16,9 @@ export default function FeaturedProducts() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data, error } = await supabase.from("featured-cars").select("*"); // No generics here
-
-      if (error) {
-        console.error("Error fetching data:", error);
-      } else {
-        setCars(data as FeaturedCar[]); // Explicit type assertion
-      }
+      const res = await fetch("/api/featured-cars");
+      const data = await res.json();
+      setCars(data);
     }
     fetchData();
   }, []);

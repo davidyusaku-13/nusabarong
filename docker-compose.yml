@@ -1,0 +1,61 @@
+services:
+  db:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nusabarong_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  # DEVELOPMENT
+  web:
+      build:
+        context: ./nextjs
+      container_name: nextjs
+      ports:
+        - "3000:3000"
+      depends_on:
+        - db
+      networks:
+        - internal
+      env_file:
+        - ./nextjs/.env.local
+      volumes:
+        - ./nextjs:/app         # <-- Mount local code into container
+        - /app/node_modules     # <-- Prevent node_modules overwrite
+      command: npm run dev      # <-- Start in dev mode
+
+  # PRODUCTION
+  # web:
+  #   build: ./nextjs
+  #   container_name: nextjs
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - db
+  #   networks:
+  #     - internal
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    networks:
+      - internal
+
+volumes:
+  postgres_data:
+
+networks:
+  internal:
+    driver: bridge

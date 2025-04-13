@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+**/node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -13,9 +13,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# next.js build outputs (now inside /nextjs)
+**/.next/
+**/out/
 
 # production
 /build
@@ -24,18 +24,29 @@
 .DS_Store
 *.pem
 
-# debug
+# debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (safe to ignore unless you're committing secrets)
 .env*
 
-# vercel
+# vercel config
 .vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+**/next-env.d.ts
+
+# docker-related (optional, if you persist data)
+docker-data/
+db-data/
+
+# db + seed dump
+/seed.sql
+
+# editor folders (optional)
+.vscode/
+.idea/
