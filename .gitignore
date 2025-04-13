@@ -44,9 +44,6 @@ yarn-error.log*
 docker-data/
 db-data/
 
-# db + seed dump
-/seed.sql
-
 # editor folders (optional)
 .vscode/
 .idea/

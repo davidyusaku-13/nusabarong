@@ -24,7 +24,7 @@ export default function FeaturedProductsCard({
         className="w-full h-full object-cover transition-all duration-1000 group-hover:h-2/3"
       />
 
-      {/* Text Overlay - Hidden initially, slides up & fades in on hover */}
+      {/* Text Overlay - Hidden initially, slides up on hover */}
       <div className="absolute bottom-0 w-full bg-white text-black p-4 flex flex-col transition-all duration-1000 translate-y-full opacity-100 group-hover:translate-y-0">
         <h3 className="text-2xl font-extrabold">{title}</h3>
         <p className="mt-2 text-sm text-justify font-normal">{description}</p>
